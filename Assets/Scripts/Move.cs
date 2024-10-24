@@ -11,6 +11,7 @@ public class Move : Agent
     [SerializeField] private Material winMaterial;
     [SerializeField] private Material loseMaterial;
     [SerializeField] private MeshRenderer planeMeshRederer;
+    [SerializeField] private float speed = 20f;
 
     public override void OnEpisodeBegin()
     {
@@ -44,12 +45,10 @@ public class Move : Agent
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
 
-        float speed = 20f;
         /*
         rb.MovePosition(transform.position + transform.forward * moveZ * speed * Time.deltaTime);
         transform.Rotate(0f, moveX * speed, 0f, Space.Self);
         */
-
         transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
 
     }
