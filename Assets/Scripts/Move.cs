@@ -15,8 +15,8 @@ public class Move : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(-15, 3f, 14);
-        targetTransform.localPosition = new Vector3(Random.Range(-8,16), 3f, -7);
+        transform.localPosition = new Vector3(Random.Range(-18, 18), 3f, Random.Range(-18, 18));
+        targetTransform.localPosition = new Vector3(Random.Range(-18,18), 3f, Random.Range(-18, 18));
     }
 
     private Rigidbody rb;
@@ -45,11 +45,11 @@ public class Move : Agent
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
 
-        /*
+       
         rb.MovePosition(transform.position + transform.forward * moveZ * speed * Time.deltaTime);
         transform.Rotate(0f, moveX * speed, 0f, Space.Self);
-        */
-        transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
+      
+        //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
 
     }
 
