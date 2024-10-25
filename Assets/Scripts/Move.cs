@@ -45,10 +45,17 @@ public class Move : Agent
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
 
+<<<<<<< HEAD
        
         rb.MovePosition(transform.position + transform.forward * moveZ * speed * Time.deltaTime);
         transform.Rotate(0f, moveX * speed, 0f, Space.Self);
       
+=======
+        
+        rb.MovePosition(transform.position + transform.forward * moveZ * speed * Time.deltaTime);
+        transform.Rotate(0f, moveX * speed, 0f, Space.Self);
+        
+>>>>>>> 5ebd7f7b829e4ee136af673fdb2d43e6744e3680
         //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
 
     }
