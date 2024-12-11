@@ -46,10 +46,6 @@ public class Move2 : Agent
         float moveforward = actions.ContinuousActions[0];
         float moveRotate = actions.ContinuousActions[1];
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 8ed96f7c322c9079b262568d592473ca87adde4a
         rb.MovePosition(transform.position + transform.forward * moveRotate * speed * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
 
