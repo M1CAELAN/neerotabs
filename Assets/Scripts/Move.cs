@@ -16,7 +16,6 @@ public class Move : Agent
     public override void OnEpisodeBegin()
     {
         transform.localPosition = new Vector3(Random.Range(-17, 17), 3f, Random.Range(-17, 17));
-        targetTransform.localPosition = new Vector3(Random.Range(-18,18), 3f, Random.Range(-18, 18));
     }
 
     private Rigidbody rb;

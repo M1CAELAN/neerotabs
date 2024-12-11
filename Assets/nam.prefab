@@ -195,7 +195,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1000
-  targetTransform: {fileID: 0}
+  targetTransform: {fileID: 3132314008518849924}
   winMaterial: {fileID: 2100000, guid: 2b8242482b14be74c8abc6d6e3b8b62f, type: 2}
   loseMaterial: {fileID: 2100000, guid: 1679ad1b3ab3802469d7dfe79f7b031a, type: 2}
   planeMeshRederer: {fileID: 267549193770279914}
@@ -529,7 +529,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  targetTransform: {fileID: 0}
+  targetTransform: {fileID: 5755588075409347107}
   winMaterial: {fileID: 2100000, guid: 1679ad1b3ab3802469d7dfe79f7b031a, type: 2}
   loseMaterial: {fileID: 2100000, guid: 2b8242482b14be74c8abc6d6e3b8b62f, type: 2}
   planeMeshRederer: {fileID: 267549193770279914}
