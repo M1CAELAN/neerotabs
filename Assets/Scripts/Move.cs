@@ -12,6 +12,7 @@ public class Move : Agent
     [SerializeField] private Material loseMaterial;
     [SerializeField] private MeshRenderer planeMeshRederer;
     [SerializeField] private float speed = 10f;
+    public int Damage = 20;
 
     public override void OnEpisodeBegin()
     {
@@ -46,10 +47,6 @@ public class Move : Agent
 
         rb.MovePosition(transform.position + transform.forward * moveRotate * speed * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
-        
-
-        //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,11 +58,11 @@ public class Move : Agent
             EndEpisode();
         }
 
-        if (other.TryGetComponent<Goal>(out Goal goal))
+        if (other.TryGetComponent<EnemyPlayer>(out EnemyPlayer enemyplayer))
         {
             SetReward(+2f);
             planeMeshRederer.material = winMaterial;
-            EndEpisode();
+            enemyplayer.TakeDamage(Damage);
         }
     }
 }

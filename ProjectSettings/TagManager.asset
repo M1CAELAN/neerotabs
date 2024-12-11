@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Wall
   - Plane
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
