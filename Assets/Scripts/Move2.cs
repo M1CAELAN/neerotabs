@@ -62,7 +62,7 @@ public class Move2 : Agent
             EndEpisode();
         }
 
-        if (other.TryGetComponent<Goal>(out Goal goal))
+        if (other.TryGetComponent<Hant>(out Hant hant))
         {
             SetReward(-2f);
             planeMeshRederer.material = winMaterial;

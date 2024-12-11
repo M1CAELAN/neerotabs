@@ -902,31 +902,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.63
+      value: -13.5
       objectReference: {fileID: 0}
     - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_LocalPosition.z
       value: 14.22
       objectReference: {fileID: 0}
+    - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755588075409347107, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6604980048720634317, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
-      propertyPath: m_RayLength
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 48.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
-      propertyPath: m_SphereCastRadius
-      value: 0.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
