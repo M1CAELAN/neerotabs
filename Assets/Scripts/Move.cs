@@ -63,7 +63,6 @@ public class Move : Agent
             SetReward(+2f);
             planeMeshRederer.material = winMaterial;
             player.TakeDamage(Damage);
-            EndEpisode();
         }
     }
 }
