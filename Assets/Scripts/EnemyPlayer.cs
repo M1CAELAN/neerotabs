@@ -9,6 +9,7 @@ public class EnemyPlayer : MonoBehaviour
     public float MaxHp = 100;
     public float CurrentHp;
     public event Action<float> HealthChanged;
+    public event Action<float> Damage;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class EnemyPlayer : MonoBehaviour
         {
             float currentHeal = (float)CurrentHp / MaxHp;
             HealthChanged.Invoke(currentHeal);
+            Damage.Invoke(1);
         }
             
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HpBar : MonoBehaviour
 {
      private static Image hpBar;
-    [SerializeField] EnemyPlayer health;
+    [SerializeField] Player health;
 
 
     private void Start()

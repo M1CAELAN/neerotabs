@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3087f2bc048597c45a5bc9af633b1296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 2007720413}
+  health: {fileID: 2007720414}
 --- !u!114 &488867574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,13 +510,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: f7bf8e668b99ccd448a79871ab4bf6a9, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &961792940
@@ -539,6 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c682c6e79222a514aa1b61a5687ddd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamina: {fileID: 2007720414}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8682126132345853208, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: speedRun
-      value: 15
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8682126132345853208, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: playerCamera
@@ -797,9 +798,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3866244853289375093, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2007720412}
-    - targetCorrespondingSourceObject: {fileID: 3866244853289375093, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2007720413}
   m_SourcePrefab: {fileID: 100100000, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
 --- !u!1 &1765358482
 GameObject:
@@ -1050,20 +1048,17 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2007720413
+--- !u!114 &2007720414 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8682126132345853208, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+  m_PrefabInstance: {fileID: 1403887734}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007720405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9966dee524ce9e2439262801a9b04328, type: 3}
+  m_Script: {fileID: 11500000, guid: 432774175791dd64a9056986af045092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHp: 100
-  CurrentHp: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

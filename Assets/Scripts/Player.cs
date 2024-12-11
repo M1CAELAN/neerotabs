@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -27,15 +28,20 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     private float stamina;
-    private int jumpStak = 1;
     public event Action<float> StaminaChanged;
     private float currentStamina;
+
+    public float MaxHp = 100;
+    public float CurrentHp;
+    public event Action<float> HealthChanged;
+
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         stamina = Maxstamina;
+        CurrentHp = MaxHp;
     }
 
     void Update()
@@ -81,7 +87,7 @@ public class Player : MonoBehaviour
         else 
         {
             characterController.Move(move * speed * Time.deltaTime);
-        }
+        }   
 
     }
 
@@ -96,7 +102,7 @@ public class Player : MonoBehaviour
 
         velocity.y += Time.deltaTime * gravity;
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded && stamina >= 30 && jumpStak > 0)
+        if (Input.GetKey(KeyCode.Space) && isGrounded && stamina >= 30)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             stamina -= 900 * Time.deltaTime;
@@ -107,4 +113,24 @@ public class Player : MonoBehaviour
 
         characterController.Move(velocity * Time.deltaTime);
     }
+
+    public void TakeDamage(float damage)
+    {
+        CurrentHp -= damage;
+
+        if (CurrentHp <= 0)
+        {
+            HealthChanged.Invoke(0);
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("Menu");
+
+        }
+        else
+        {
+            float currentHeal = (float)CurrentHp / MaxHp;
+            HealthChanged.Invoke(currentHeal);
+        }
+
+    }
+
 }

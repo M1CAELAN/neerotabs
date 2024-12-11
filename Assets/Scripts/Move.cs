@@ -58,11 +58,11 @@ public class Move : Agent
             EndEpisode();
         }
 
-        if (other.TryGetComponent<EnemyPlayer>(out EnemyPlayer enemyplayer))
+        if (other.TryGetComponent<Player>(out Player player))
         {
             SetReward(+2f);
             planeMeshRederer.material = winMaterial;
-            enemyplayer.TakeDamage(Damage);
+            player.TakeDamage(Damage);
             EndEpisode();
         }
     }
