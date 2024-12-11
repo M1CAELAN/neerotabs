@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
 
     [Header("Settings")]
+    [SerializeField] private float Maxstamina = 100f;
     [SerializeField] private float checkRadiusSphere = 0.2f;
     [SerializeField] private float gravity = -14f;
     [SerializeField] private float speed = 4F;
@@ -18,15 +20,22 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpHeight = 1f;
     [Range(1, 100)]
     [SerializeField] private float sensitivity = 50f;
+ 
 
     private float rotationX;
     Vector3 move;
     Vector3 velocity;
     bool isGrounded;
+    private float stamina;
+    private int jumpStak = 1;
+    public event Action<float> StaminaChanged;
+    private float currentStamina;
+
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        stamina = Maxstamina;
     }
 
     void Update()
@@ -34,7 +43,12 @@ public class Player : MonoBehaviour
         RotateCamera();
         Move();
         Velocity();
-
+        if (stamina < 100)
+        {
+            stamina += 6 * Time.deltaTime;
+            currentStamina = (float)stamina / Maxstamina;
+            StaminaChanged.Invoke(currentStamina);
+        }
     }
 
     private void RotateCamera()
@@ -57,9 +71,12 @@ public class Player : MonoBehaviour
 
         move = transform.forward * moveY + transform.right * moveX;
 
-        if (Input.GetKey(KeyCode.LeftShift) && (moveX != 0 || moveY != 0))
+        if (Input.GetKey(KeyCode.LeftShift) && (moveX != 0 || moveY != 0) && stamina > 0)
         {
             characterController.Move(move * speedRun * Time.deltaTime);
+            stamina -= 25 * Time.deltaTime;
+            currentStamina = (float) stamina / Maxstamina;
+            StaminaChanged.Invoke(currentStamina);
         }
         else 
         {
@@ -79,9 +96,13 @@ public class Player : MonoBehaviour
 
         velocity.y += Time.deltaTime * gravity;
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded && stamina >= 30 && jumpStak > 0)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            stamina -= 900 * Time.deltaTime;
+            currentStamina = (float)stamina / Maxstamina;
+            StaminaChanged.Invoke(currentStamina);
+
         }
 
         characterController.Move(velocity * Time.deltaTime);
