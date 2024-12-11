@@ -22,12 +22,14 @@ public class EnemyPlayer : MonoBehaviour
         if (CurrentHp <= 0)
         {
             HealthChanged.Invoke(0);
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("Menu");
+
         }
         else
         {
             float currentHeal = (float)CurrentHp / MaxHp;
             HealthChanged.Invoke(currentHeal);
-            Cursor.lockState = CursorLockMode.None;
         }
             
     }
