@@ -11,11 +11,13 @@ public class Move2 : Agent
     [SerializeField] private Material winMaterial;
     [SerializeField] private Material loseMaterial;
     [SerializeField] private MeshRenderer planeMeshRederer;
-    [SerializeField] private float speed = 20f;
+    [SerializeField] private float speed = 10f;
+
+    public int Damage = 10;
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(7, 3f, 0);
+        transform.localPosition = new Vector3(Random.Range(-17, 17), 3f, Random.Range(-17, 17));
     }
 
     private Rigidbody rb;
@@ -44,11 +46,12 @@ public class Move2 : Agent
         float moveforward = actions.ContinuousActions[0];
         float moveRotate = actions.ContinuousActions[1];
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8ed96f7c322c9079b262568d592473ca87adde4a
         rb.MovePosition(transform.position + transform.forward * moveRotate * speed * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
-
-        //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
 
     }
 
@@ -61,9 +64,9 @@ public class Move2 : Agent
             EndEpisode();
         }
 
-        if (other.TryGetComponent<Hant>(out Hant hant))
+        if (other.TryGetComponent<Goal>(out Goal goal))
         {
-            SetReward(-2f);
+            SetReward(+2f);
             planeMeshRederer.material = winMaterial;
             EndEpisode();
         }
