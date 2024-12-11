@@ -49,9 +49,6 @@ public class Move2 : Agent
         rb.MovePosition(transform.position + transform.forward * moveRotate * speed * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
 
-
-        //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
-
     }
 
     private void OnTriggerEnter(Collider other)
