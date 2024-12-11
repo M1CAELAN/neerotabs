@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1707688244728935618, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4932493756772169553, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_InferenceDevice
@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604980048720634317, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -850,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 800431245766265359, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 800431245766265359, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -910,7 +910,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604980048720634317, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_RayLength
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_MaxRayDegrees
+      value: 48.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_RaysPerDirection
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301639696149752164, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_SphereCastRadius
+      value: 0.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
