@@ -5,7 +5,7 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
-public class Move : Agent
+public class Move2 : Agent
 {
     [SerializeField] private Transform targetTransform;
     [SerializeField] private Material winMaterial;
@@ -15,15 +15,15 @@ public class Move : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(Random.Range(-17, 17), 3f, Random.Range(-17, 17));
-        targetTransform.localPosition = new Vector3(Random.Range(-18,18), 3f, Random.Range(-18, 18));
+        transform.localPosition = new Vector3(-15, 3f, 14);
+        targetTransform.localPosition = new Vector3(Random.Range(-8, 16), 3f, -7);
     }
 
     private Rigidbody rb;
 
     public override void Initialize()
     {
-        rb  = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -45,9 +45,9 @@ public class Move : Agent
         float moveforward = actions.ContinuousActions[0];
         float moveRotate = actions.ContinuousActions[1];
 
-        rb.MovePosition(transform.localPosition + transform.forward * moveRotate * speed * 0.5f * Time.deltaTime);
+
+        rb.MovePosition(transform.localPosition + transform.forward * moveRotate * speed * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
-        
 
         //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * speed;
 
@@ -62,9 +62,9 @@ public class Move : Agent
             EndEpisode();
         }
 
-        if (other.TryGetComponent<Goal>(out Goal goal))
+        if (other.TryGetComponent<Hant>(out Hant hant))
         {
-            SetReward(+2f);
+            SetReward(-2f);
             planeMeshRederer.material = winMaterial;
             EndEpisode();
         }
