@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,21 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class EnemyPlayer : MonoBehaviour
 {
-    public int MaxHp = 100;
-    public int CurrentHp;
+    public float MaxHp = 100;
+    public float CurrentHp;
+    public event Action<float> HealthChanged;
 
     void Start()
     {
         CurrentHp = MaxHp;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         CurrentHp -= damage;
 
         if (CurrentHp <= 0)
         {
-            SceneManager.LoadScene(0);
+            HealthChanged.Invoke(0);
         }
+        else
+        {
+            float currentHeal = (float)CurrentHp / MaxHp;
+            HealthChanged.Invoke(currentHeal);
+            Cursor.lockState = CursorLockMode.None;
+        }
+            
     }
 }
