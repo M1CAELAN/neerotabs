@@ -12,6 +12,7 @@ public class EnemyPlayer : MonoBehaviour
     public event Action<float> HealthChanged;
     private bool is_dead = false;
 
+
     void Start()
     {
         CurrentHp = MaxHp;
