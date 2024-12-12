@@ -909,6 +909,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6503136109141761224, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1806484599}
+    - targetCorrespondingSourceObject: {fileID: 6503136109141761224, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1765358486}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3937155250081827541, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       insertIndex: -1
@@ -1094,7 +1097,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 272155248}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2007720406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1328,4 +1331,3 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1403887734}
   - {fileID: 821927508}
-  - {fileID: 1765358486}
