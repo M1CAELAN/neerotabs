@@ -46,10 +46,6 @@ public class Move : Agent
         float moveRotate = actions.ContinuousActions[1];
 
         rb.MovePosition(transform.position + transform.forward * moveRotate * speed * 0.5f * Time.deltaTime);
-<<<<<<< HEAD
-
-=======
->>>>>>> 8ed96f7c322c9079b262568d592473ca87adde4a
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
     }
 
