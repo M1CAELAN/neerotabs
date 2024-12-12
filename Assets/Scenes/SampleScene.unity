@@ -767,6 +767,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 4080541963438657646, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 45.856926
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080541963438657646, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 44.2035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911049613109774551, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 41.285748
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161105645349582282, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194315741527493576, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 40.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 5767711887148396311, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6055268947910089825, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_Name
       value: kub
@@ -782,6 +806,18 @@ PrefabInstance:
     - target: {fileID: 6633972386805630668, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6645448656353373192, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881786100288016661, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 38.893948
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934545422727238895, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7218370167974856554, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_Name
@@ -810,6 +846,10 @@ PrefabInstance:
     - target: {fileID: 8100405033209016873, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656650278869119024, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 41.047657
       objectReference: {fileID: 0}
     - target: {fileID: 8682126132345853208, guid: 1243c3e543dc2664da2afe962d1f9bf2, type: 3}
       propertyPath: playerCamera
