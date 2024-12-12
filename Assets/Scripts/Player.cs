@@ -34,12 +34,14 @@ public class Player : MonoBehaviour
     public float MaxHp = 100;
     public float CurrentHp;
     public event Action<float> HealthChanged;
+    public DethScript dethScript;
 
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        dethScript = FindObjectOfType<DethScript>();
         stamina = Maxstamina;
         CurrentHp = MaxHp;
     }
@@ -122,7 +124,7 @@ public class Player : MonoBehaviour
         {
             HealthChanged.Invoke(0);
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene("Menu");
+            dethScript.gameOver();
 
         }
         else
