@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/DethScript.cs.meta
-guid: 3a0d6ab74ad24be47a9f03b83b888a3a
-========
-guid: fabbd326d619b6947982a04260fdff6c
->>>>>>>> anton:Assets/Scripts/GameController.cs.meta
+guid: 9ea9fba1f6127f743ba5b5202b58ccf3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
