@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1158541637151040326}
+  light: {fileID: 2077953469090692147}
   characterController: {fileID: 6745988582996702490}
   checkGroundTransform: {fileID: 2386835456740702392}
   groundMask:

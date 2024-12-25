@@ -72,6 +72,19 @@ public class Player : MonoBehaviour
         transform.Rotate(0, mouseX, 0);
     }
 
+    private void Light()
+    {
+
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime * 5;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime * 5;
+
+        rotationX -= mouseY;
+        rotationX = Mathf.Clamp(rotationX, -90, 90);
+
+        playerCamera.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.Rotate(0, mouseX, 0);
+    }
+
     private void Move()
     {
         float moveX = Input.GetAxis("Horizontal");
