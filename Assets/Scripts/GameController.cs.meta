@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 <<<<<<<< HEAD:Assets/Scripts/DethScript.cs.meta
+<<<<<<< HEAD
+guid: ae641d3282cff004aa128fa7bc6757a2
+=======
 guid: 890001c8de5da2c4ab9b8d2a32721ef9
+>>>>>>> b5adddd793c48be28eb54fcb037daea36fee5d08
 ========
 guid: fabbd326d619b6947982a04260fdff6c
 >>>>>>>> anton:Assets/Scripts/GameController.cs.meta

@@ -85,6 +85,7 @@ public class MazeConstructor : MonoBehaviour
         go.transform.position = Vector3.zero;
         go.name = "Procedural Maze";
         go.tag = "Generated";
+        go.layer = 3;
 
         MeshFilter mf = go.AddComponent<MeshFilter>();
         mf.mesh = meshGenerator.FromData(data);

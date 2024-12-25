@@ -202,13 +202,7 @@ MonoBehaviour:
   winMaterial: {fileID: 2100000, guid: 2b8242482b14be74c8abc6d6e3b8b62f, type: 2}
   loseMaterial: {fileID: 2100000, guid: 1679ad1b3ab3802469d7dfe79f7b031a, type: 2}
   planeMeshRederer: {fileID: 0}
-  checkGroundTransform: {fileID: 5696823525953802888}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 8
-  checkRadiusSphere: 0.2
   speed: 15
-  gravity: -14
   Damage: 20
 --- !u!114 &7604982513703149234
 MonoBehaviour:
@@ -257,7 +251,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &6806302194081097584
 PrefabInstance:
