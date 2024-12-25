@@ -365,7 +365,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1158541637151040326}
-  light: {fileID: 2077953469090692147}
   characterController: {fileID: 6745988582996702490}
   checkGroundTransform: {fileID: 2386835456740702392}
   groundMask:
@@ -1361,7 +1360,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7381491398486860788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a0d6ab74ad24be47a9f03b83b888a3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e5bb2c3aca8a9e4b82e69c17ce0d871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   game_over: {fileID: 7712115253833540392}

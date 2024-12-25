@@ -11,8 +11,15 @@ public class Move : Agent
     [SerializeField] private Material winMaterial;
     [SerializeField] private Material loseMaterial;
     [SerializeField] private MeshRenderer planeMeshRederer;
+    [SerializeField] private Transform checkGroundTransform;
+    [SerializeField] private LayerMask groundMask;
+
+    [SerializeField] private float checkRadiusSphere = 0.2f;
     [SerializeField] private float speed = 10f;
+    [SerializeField] private float gravity = -14f;
     public int Damage = 20;
+    Vector3 velocity;
+    bool isGrounded;
     private Rigidbody rb;
 
     public override void OnEpisodeBegin()
@@ -23,7 +30,7 @@ public class Move : Agent
 
     public override void Initialize()
     {
-        rb  = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -45,9 +52,11 @@ public class Move : Agent
         float moveforward = actions.ContinuousActions[0];
         float moveRotate = actions.ContinuousActions[1];
 
-        transform.position += new Vector3(moveforward, 0, 0) * Time.deltaTime * speed;
+        rb.MovePosition(transform.position + transform.forward * moveRotate * speed * 0.5f * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
     }
+
+ 
 
     private void OnTriggerEnter(Collider other)
     {
