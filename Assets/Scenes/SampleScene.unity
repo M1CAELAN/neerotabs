@@ -342,7 +342,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6261867143512412, guid: 138d1e27c57b95c4083901e604f0d729, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6261867143512412, guid: 138d1e27c57b95c4083901e604f0d729, type: 3}
       propertyPath: m_AngularDrag
@@ -416,8 +416,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6261867143512412, guid: 138d1e27c57b95c4083901e604f0d729, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
