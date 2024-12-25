@@ -13,13 +13,13 @@ public class Move : Agent
     [SerializeField] private MeshRenderer planeMeshRederer;
     [SerializeField] private float speed = 10f;
     public int Damage = 20;
-    private Rigidbody rb;
 
     public override void OnEpisodeBegin()
     {
         transform.localPosition = new Vector3(-2f, 3f, 13f);
     }
 
+    private Rigidbody rb;
 
     public override void Initialize()
     {
@@ -45,7 +45,7 @@ public class Move : Agent
         float moveforward = actions.ContinuousActions[0];
         float moveRotate = actions.ContinuousActions[1];
 
-        transform.position += new Vector3(moveforward, 0, 0) * Time.deltaTime * speed;
+        rb.MovePosition(transform.position + transform.forward * moveRotate * speed * 0.5f * Time.deltaTime);
         transform.Rotate(0f, moveforward * speed, 0f, Space.Self);
     }
 
