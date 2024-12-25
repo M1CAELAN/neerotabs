@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Transform playerCamera; // —сылка на камеру игрока
+    [SerializeField] private Transform playerCamera;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Transform checkGroundTransform;
     [SerializeField] private LayerMask groundMask;
