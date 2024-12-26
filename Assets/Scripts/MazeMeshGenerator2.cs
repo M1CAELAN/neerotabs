@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class MazeMeshGenerator2
 {
-    // generator params
-    public float width;     // how wide are hallways
-    public float height;    // how tall are hallways
+    public float width;     
+    public float height;    
 
     public MazeMeshGenerator2()
     {
@@ -17,7 +16,6 @@ public class MazeMeshGenerator2
     {
         Mesh maze = new Mesh();
 
-        //3
         List<Vector3> newVertices = new List<Vector3>();
         List<Vector2> newUVs = new List<Vector2>();
 
@@ -29,14 +27,12 @@ public class MazeMeshGenerator2
         int cMax = data.GetUpperBound(1);
         float halfH = height * .5f;
 
-        //4
         for (int i = 0; i <= rMax; i++)
         {
             for (int j = 0; j <= cMax; j++)
             {
                 if (data[i, j] != 1)
                 {
-                    // walls on sides next to blocked grid cells
 
                     if (i - 1 < 0 || data[i - 1, j] == 1)
                     {
@@ -83,19 +79,16 @@ public class MazeMeshGenerator2
         maze.SetTriangles(floorTriangles.ToArray(), 0);
         maze.SetTriangles(wallTriangles.ToArray(), 1);
 
-        //5
         maze.RecalculateNormals();
 
         return maze;
     }
 
-    //1, 2
     private void AddQuad(Matrix4x4 matrix, ref List<Vector3> newVertices,
         ref List<Vector2> newUVs, ref List<int> newTriangles)
     {
         int index = newVertices.Count;
 
-        // corners before transforming
         Vector3 vert1 = new Vector3(-.5f, -.5f, 0);
         Vector3 vert2 = new Vector3(-.5f, .5f, 0);
         Vector3 vert3 = new Vector3(.5f, .5f, 0);

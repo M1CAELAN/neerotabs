@@ -13,15 +13,19 @@ public class Move : Agent
     [SerializeField] private Material loseMaterial;
     [SerializeField] private float speed = 10f;
     public int Damage = 20;
+    public int k = 0;
 
     private MazeConstructor generator;
 
     public override void OnEpisodeBegin()
     {
         generator = GetComponent<MazeConstructor>();
-        generator.DisposeOldMaze();
-        generator.GenerateNewMaze(11, 13);
-
+        if (k == 0)
+        {
+            k = 1;
+            generator.DisposeOldMaze();
+            generator.GenerateNewMaze(11, 13);
+        }
         
         targetTransform.localPosition = new Vector3(40f, 1.5f, 33f);
         transform.localPosition = new Vector3(3f, 1.5f, 3f);
@@ -62,14 +66,14 @@ public class Move : Agent
         if (other.CompareTag("Wall"))
         {
             SetReward(-1f);
-            EndEpisode();
+
         }
 
         if (other.TryGetComponent<Player>(out Player player))
         {
             SetReward(+2f);
             player.TakeDamage(Damage);
-            EndEpisode();
+
         }
     }
 }
