@@ -10,6 +10,7 @@ public class DethScript : MonoBehaviour
 
     public void gameOver()
     {
+        Time.timeScale = 0f;
         game_over.SetActive(true);
     }
     public void Restart()
