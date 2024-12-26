@@ -49,10 +49,6 @@ public class MazeMeshGenerator
                         Quaternion.LookRotation(Vector3.down),
                         new Vector3(width, width, 1)
                     ), ref newVertices, ref newUVs, ref floorTriangles);
-
-
-                    // walls on sides next to blocked grid cells
-
                   
                 }
             }

@@ -13,6 +13,8 @@ public class MazeConstructor : MonoBehaviour
     [SerializeField] private Material startMat;
     [SerializeField] private Material treasureMat;
 
+
+
     public int startRow
     {
         get; private set;
@@ -99,7 +101,7 @@ public class MazeConstructor : MonoBehaviour
         {
             for (int j = 0; j <= cMax; j++)
             {
-                if (maze[i, j] == 0)
+                if (maze[i, j] == 1)
                 {
                     startRow = i;
                     startCol = j;
