@@ -5,18 +5,26 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
+[RequireComponent(typeof(MazeConstructor))]
 public class Move : Agent
 {
     [SerializeField] private Transform targetTransform;
     [SerializeField] private Material winMaterial;
     [SerializeField] private Material loseMaterial;
-    [SerializeField] private MeshRenderer planeMeshRederer;
     [SerializeField] private float speed = 10f;
     public int Damage = 20;
 
+    private MazeConstructor generator;
+
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(-2f, 3f, 13f);
+        generator = GetComponent<MazeConstructor>();
+        generator.DisposeOldMaze();
+        generator.GenerateNewMaze(11, 13);
+
+        
+        targetTransform.localPosition = new Vector3(40f, 1.5f, 33f);
+        transform.localPosition = new Vector3(3f, 1.5f, 3f);
     }
 
     private Rigidbody rb;
@@ -51,18 +59,17 @@ public class Move : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Wall>(out Wall wall))
+        if (other.CompareTag("Wall"))
         {
             SetReward(-1f);
-            planeMeshRederer.material = loseMaterial;
             EndEpisode();
         }
 
         if (other.TryGetComponent<Player>(out Player player))
         {
             SetReward(+2f);
-            planeMeshRederer.material = winMaterial;
             player.TakeDamage(Damage);
+            EndEpisode();
         }
     }
 }

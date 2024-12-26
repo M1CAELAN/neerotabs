@@ -7,9 +7,13 @@ public class GameController : MonoBehaviour
 {
     private MazeConstructor generator;
 
+    public int[,] data
+    {
+        get; private set;
+    }
+
     void Start()
     {
-        generator = GetComponent<MazeConstructor>();
-        generator.GenerateNewMaze(11, 13);// 2
+
     }
 }
