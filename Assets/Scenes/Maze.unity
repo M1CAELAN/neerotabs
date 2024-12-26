@@ -122,8 +122,8 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &121318327
-GameObject:
+--- !u!1001 &666005470
+PrefabInstance:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -495,3 +495,4 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 2104043999}
   - {fileID: 1963038307}
+

@@ -19,6 +19,7 @@ public class Move : Agent
 
     public override void OnEpisodeBegin()
     {
+        Time.timeScale = 1f;
         generator = GetComponent<MazeConstructor>();
         if (k == 0)
         {
