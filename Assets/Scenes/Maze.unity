@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 4187977723266003676, guid: 138d1e27c57b95c4083901e604f0d729, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 464ccaad9f70780479366ec8f08802dd, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 400fa517d802fa747a5fedf52b1b8cc8, type: 3}
     - target: {fileID: 4484313426960045113, guid: 138d1e27c57b95c4083901e604f0d729, type: 3}
       propertyPath: mazeMat1
       value: 
